@@ -289,6 +289,44 @@
                     font-size: 15px;
                 }
             }
+        
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+            /* Гарантируем, что контейнер всегда будет по центру */
+            .container {
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                position: relative;
+            }
+
+            /* Исправляем ширину кнопок для мобильных устройств */
+            @media (max-width: 480px) {
+                .social-button {
+                    width: 100% !important;
+                    max-width: 48%; /* Чтобы две кнопки поместились в ряд */
+                }
+            }
+
+            /* Гарантируем, что калькулятор и кнопки одинаковой ширины */
+            .calculator, .social-buttons {
+                width: 100%;
+            }
+
+            /* На очень маленьких экранах делаем кнопки адаптивными */
+            @media (max-width: 400px) {
+                .social-button {
+                    max-width: 48%;
+                    padding: 0 10px;
+                    font-size: 14px;
+                }
+            }
     </style>
 </head>
 <body>
@@ -342,10 +380,10 @@
         
         <!-- КНОПКИ ТАКОЙ ЖЕ ШИРИНЫ КАК У ФОРМ -->
         <div class="social-buttons">
-            <a href="https://t.me/ваш_телеграм" target="_blank" class="social-button telegram">
+            <a href="https://t.me/Anloman" target="_blank" class="social-button telegram">
                 Telegram
             </a>
-            <a href="https://vk.com/ваш_вк" target="_blank" class="social-button vk">
+            <a href="https://vk.com/zabivzhestkiy?from=groups" target="_blank" class="social-button vk">
                 ВКонтакте
             </a>
         </div>
